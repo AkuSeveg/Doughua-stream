@@ -44,7 +44,7 @@ const {
           </div>
         </a>
         <div class="hidden">
-          {anime.genreList.map((genre) => (
+          {anime.genreList.map((genre: GenreLinkCard) => (
             <a href={generateUrlPath("/genres", genre.genreId)}>
               {genre.title}
             </a>

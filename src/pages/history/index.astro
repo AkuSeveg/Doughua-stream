@@ -8,7 +8,7 @@ import Sidebar from "@components/Sidebar.astro";
 import animeConfig from "@configs/animeConfig";
 
 const {
-  molidonghub: { siteName },
+  huastream: { siteName },
 } = animeConfig;
 
 const title = `Riwayat Menonton - ${siteName}`;
@@ -47,7 +47,7 @@ const title = `Riwayat Menonton - ${siteName}`;
 </Layout>
 
 <script is:inline>
-  const historyKey = "molidonghub_history";
+  const historyKey = "huastream_history";
   const historyContainer = document.getElementById("history-list");
   const emptyMsg = document.getElementById("empty-msg");
   const clearBtn = document.getElementById("clear-history");

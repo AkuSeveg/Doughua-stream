@@ -31,7 +31,7 @@ const {
     <input
       type="search"
       id="search-input"
-      class="block w-full p-3 ps-10 text-sm text-zinc-900 border border-zinc-300 rounded-lg bg-zinc-50 focus:ring-amber-500 focus:border-amber-500 dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+      class="block w-full p-3 ps-10 text-sm text-zinc-900 border border-zinc-300 rounded-lg bg-zinc-50 focus:ring-red-500 focus:border-red-500 dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500"
       placeholder="Cari Anime..."
       required
     />
@@ -40,16 +40,16 @@ const {
 <p>
   Belum menemukan anime yg anda inginkan?, cari <a
     href="/search"
-    class="underline text-amber-700 dark:text-amber-500">disini</a
+    class="underline text-red-700 dark:text-red-500">disini</a
   >
 </p>
 {
-  list.map((item) => (
+  list.map((item: AllAnimes["list"][number]) => (
     <div class="flex flex-col gap-4">
       <WidgetTitle title={item.startWith} />
 
       <ul class="anime-list w-full grid sm:grid-cols-2 gap-y-2 gap-x-4 list-disc pl-4">
-        {item.animeList.map((anime) => (
+        {item.animeList.map((anime: animeLinkCard) => (
           <li>
             <a
               href={generateUrlPath(baseUrlPath, anime.animeId)}

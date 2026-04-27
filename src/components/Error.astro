@@ -9,7 +9,7 @@ interface Props {
 
 const { statusCode, message } = Astro.props;
 const {
-  molidonghub: { siteName },
+  huastream: { siteName },
 } = animeConfig;
 const title = `${statusCode} ${message} - ${siteName}`;
 ---
@@ -25,7 +25,7 @@ const title = `${statusCode} ${message} - ${siteName}`;
     {statusCode}
     {message}
   </h1>
-  <a href={Astro.url.origin} class="text-center text-sky-700 dark:text-sky-400"
+  <a href={Astro.url.origin} class="text-center text-red-700 dark:text-red-400"
     >Kembali ke halaman utama</a
   >
 </Layout>

@@ -1,4 +1,4 @@
-# MoliDonghub
+# HuaStream
 
 Platform streaming donghua modern yang dibangun dengan teknologi web terkini.
 
@@ -15,8 +15,8 @@ Platform streaming donghua modern yang dibangun dengan teknologi web terkini.
 ### Clone Repository
 
 ```sh
-git clone https://github.com/MoliVollereii/molidonghub.git
-cd molidonghub
+git clone https://github.com/AkuSeveg/Doughua-stream.git
+cd Doughua-stream
 ```
 
 ### Install Dependencies
@@ -25,7 +25,7 @@ cd molidonghub
 npm install
 ```
 
-## 🛠️ Development
+## 🛠 Development
 
 Menjalankan server dalam mode pengembangan:
 
@@ -33,7 +33,7 @@ Menjalankan server dalam mode pengembangan:
 npm run dev
 ```
 
-## 🏗️ Build & Preview
+## 🏗 Build & Preview
 
 Build project untuk production:
 
