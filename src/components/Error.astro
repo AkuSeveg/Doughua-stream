@@ -21,11 +21,23 @@ const title = `${statusCode} ${message} - ${siteName}`;
     nofollow: true,
   }}
 >
-  <h1 class="text-center text-xl font-extrabold">
-    {statusCode}
-    {message}
-  </h1>
-  <a href={Astro.url.origin} class="text-center text-red-700 dark:text-red-400"
-    >Kembali ke halaman utama</a
-  >
+  <div class="panel-card mx-auto max-w-2xl text-center mt-12 flex flex-col items-center gap-4">
+    <span class="font-hanzi text-5xl text-red-700 dark:text-red-400">错</span>
+    <h1 class="font-display text-3xl md:text-5xl font-extrabold tracking-wide">
+      {statusCode}
+      <span class="text-red-700 dark:text-red-400">·</span>
+      {message}
+    </h1>
+    <div
+      aria-hidden="true"
+      class="h-px w-32 bg-gradient-to-r from-transparent via-red-700/60 to-transparent"
+    >
+    </div>
+    <a
+      href={Astro.url.origin}
+      class="inline-flex items-center gap-2 text-white bg-lantern-red shadow-scroll hover:brightness-110 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-md text-sm px-4 py-2 transition"
+    >
+      Kembali ke halaman utama
+    </a>
+  </div>
 </Layout>
