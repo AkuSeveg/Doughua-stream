@@ -23,18 +23,32 @@ const {
 const { navLinks } = Astro.props;
 ---
 
-<footer class="bg-white dark:bg-zinc-900">
-  <div class="container w-full py-8 lg:py-10">
+<footer
+  class="relative bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-t border-red-900/15 dark:border-red-500/15 mt-12"
+>
+  <div
+    aria-hidden="true"
+    class="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-red-700/60 to-transparent"
+  >
+  </div>
+  <div class="container w-full py-10 lg:py-12">
+    <div class="scroll-divider mb-8">
+      <span class="hanzi">华 · 流</span>
+    </div>
     <div class="lg:flex lg:justify-between gap-8">
       <div class="mb-6 lg:mb-0 max-w-[500px]">
-        <a href={Astro.url.origin} class="flex items-center max-w-min">
-          <img src={logo} class="w-8 me-3" alt=`${siteName} Logo` />
+        <a href={Astro.url.origin} class="flex items-center gap-3">
           <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            class="inline-flex items-center justify-center w-9 h-9 rounded-md bg-lantern-red shadow-scroll"
+          >
+            <img src={logo} class="w-6" alt=`${siteName} Logo` />
+          </span>
+          <span
+            class="self-center font-display text-2xl font-bold whitespace-nowrap text-red-800 dark:text-red-400"
             >{siteName}</span
           >
         </a>
-        <p class="py-4">
+        <p class="py-4 text-zinc-600 dark:text-zinc-400 leading-relaxed">
           This site does not store any files on our server, we are linked to the
           media which is hosted on 3rd party services.
         </p>
@@ -72,12 +86,18 @@ const { navLinks } = Astro.props;
         </ul>
       </div>
     </div>
-    <hr class="my-6 border-zinc-200 sm:mx-auto dark:border-zinc-700 lg:my-8" />
-    <div class="sm:flex sm:items-center sm:justify-between">
+    <div
+      aria-hidden="true"
+      class="my-8 h-px bg-gradient-to-r from-transparent via-red-700/40 to-transparent"
+    >
+    </div>
+    <div class="sm:flex sm:items-center sm:justify-between gap-4">
       <span class="text-sm text-zinc-500 sm:text-center dark:text-zinc-400"
         >© {new Date().getFullYear()}
-        <a href={Astro.url.origin} class="hover:underline">{siteName}</a>. All
-        Rights Reserved.
+        <a href={Astro.url.origin} class="hover:text-red-700 dark:hover:text-red-400 transition-colors">{siteName}</a>
+        — Curated by
+        <span class="text-red-700 dark:text-red-400 font-semibold">Yoanz</span>.
+        All Rights Reserved.
       </span>
       <div class="flex mt-4 sm:justify-center sm:mt-0">
         <a
