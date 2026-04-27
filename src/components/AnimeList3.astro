@@ -33,10 +33,10 @@ const {
           </h3>
           <div class="text-sm line-clamp-2">
             <span class="font-bold">Genres : </span>
-            {anime.genreList.map((genre, index) => (
+            {anime.genreList.map((genre: GenreLinkCard, index: number) => (
               <a
                 href={generateUrlPath("/genres", genre.genreId)}
-                class="hover:text-amber-700 dark:hover:text-amber-500"
+                class="hover:text-red-700 dark:hover:text-red-500"
               >
                 {index !== anime.genreList.length - 1
                   ? `${genre.title},`

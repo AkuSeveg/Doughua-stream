@@ -12,7 +12,7 @@ interface Props {
 }
 
 const {
-  molidonghub: { siteName, logo },
+  huastream: { siteName, logo },
 } = animeConfig;
 const { navLinks } = Astro.props;
 ---
@@ -56,13 +56,13 @@ const { navLinks } = Astro.props;
                 <input
                   type="search"
                   id="navbar-input-search"
-                  class="block p-2.5 w-full z-20 text-sm text-zinc-900 bg-zinc-50 rounded-lg border border-zinc-300 focus:ring-orange-500 focus:border-orange-500 dark:bg-zinc-800 dark:border-zinc-600 dark:placeholder-zinc-400 dark:text-white dark:focus:border-orange-500"
+                  class="block p-2.5 w-full z-20 text-sm text-zinc-900 bg-zinc-50 rounded-lg border border-zinc-300 focus:ring-red-500 focus:border-red-500 dark:bg-zinc-800 dark:border-zinc-600 dark:placeholder-zinc-400 dark:text-white dark:focus:border-red-500"
                   placeholder="Cari anime.."
                   required
                 />
                 <button
                   type="submit"
-                  class="absolute top-0 end-0 h-full p-2.5 text-sm font-medium text-white bg-orange-600 rounded-e-lg border border-orange-600 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-500 dark:hover:bg-orange-600 dark:focus:ring-orange-700"
+                  class="absolute top-0 end-0 h-full p-2.5 text-sm font-medium text-white bg-red-600 rounded-e-lg border border-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-700"
                 >
                   <SearchIcon class="w-4 h-4" />
                 </button>
@@ -77,7 +77,7 @@ const { navLinks } = Astro.props;
         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-zinc-700 rounded-lg hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-700"
       >
         <MoonIcon id="icon-moon" class="hidden" />
-        <SunIcon id="icon-sun" class="text-amber-500 hidden" />
+        <SunIcon id="icon-sun" class="text-red-500 hidden" />
       </button>
       <button
         data-collapse-toggle="navbar-sticky"

@@ -18,7 +18,7 @@ interface Props {
 }
 
 const {
-  molidonghub: { siteName, logo },
+  huastream: { siteName, logo },
 } = animeConfig;
 const { navLinks } = Astro.props;
 ---
@@ -76,19 +76,19 @@ const { navLinks } = Astro.props;
     <div class="sm:flex sm:items-center sm:justify-between">
       <span class="text-sm text-zinc-500 sm:text-center dark:text-zinc-400"
         >© {new Date().getFullYear()}
-        <a href={Astro.url.origin} class="hover:underline">{siteName} | SannForums</a>. All
+        <a href={Astro.url.origin} class="hover:underline">{siteName}</a>. All
         Rights Reserved.
       </span>
       <div class="flex mt-4 sm:justify-center sm:mt-0">
         <a
-          href="https://molivollerei.com"
+          href="https://github.com/AkuSeveg/Doughua-stream"
           target="_blank"
           class="text-zinc-500 hover:text-zinc-900 dark:hover:text-white ms-5"
         >
           <GithubIcon />
         </a>
         <a
-          href="https://sociabuzz.com/molidonghub/tribe"
+          href="https://sociabuzz.com/huastream/tribe"
           target="_blank"
           class="text-zinc-500 hover:text-zinc-900 dark:hover:text-white ms-5"
         >
